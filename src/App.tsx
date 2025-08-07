@@ -82,9 +82,8 @@ const App: React.FC = () => {
           Your browser does not support the video tag.
         </video>
         <div className="hero-content">
-          <h1 className="hero-title">
-            Breakthrough AI <span className="highlight">for Active Living</span>
-          </h1>
+          {/* Plain, high-impact heading without gradient colours */}
+          <h1 className="hero-title">Breakthrough AI for Active Living</h1>
           <p>
             Powering the future of AI and robotics through groundbreaking
             patents and platforms.
