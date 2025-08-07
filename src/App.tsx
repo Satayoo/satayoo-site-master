@@ -11,6 +11,7 @@ import './App.css';
  */
 const App: React.FC = () => {
   const year = new Date().getFullYear();
+
   return (
     <div className="app-container">
       {/* Announcement bar with a short message and link */}
@@ -81,7 +82,9 @@ const App: React.FC = () => {
           Your browser does not support the video tag.
         </video>
         <div className="hero-content">
-          <h1>Breaktrough AI for Active Living</h1>
+          <h1 className="hero-title">
+            Breakthrough AI <span className="highlight">for Active Living</span>
+          </h1>
           <p>
             Powering the future of AI and robotics through groundbreaking
             patents and platforms.
@@ -99,7 +102,10 @@ const App: React.FC = () => {
 
       {/* Trusted by section with company logos */}
       <section className="trusted">
-        <p className="trusted-text">Satayoo builds next-gen AI robotics using the world's most advanced tools</p>
+        <p className="trusted-text">
+          Satayoo builds next‑gen AI robotics using the world's most advanced
+          tools
+        </p>
         <div className="trusted-logos">
           <img src="/logos/gemini.png" alt="Gemini Pro logo" />
           <img src="/logos/naturalreader.png" alt="Natural Reader logo" />
@@ -174,9 +180,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        © {year} Satayoo. All rights reserved.
-      </footer>
+      <footer className="footer">© {year} Satayoo. All rights reserved.</footer>
     </div>
   );
 };
