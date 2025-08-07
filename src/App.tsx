@@ -42,7 +42,7 @@ const App: React.FC = () => {
 
       {/* Hero section */}
       <section className="hero">
-        <h1>Connect Your Innovations to the World</h1>
+        <h1>Breaktrough AI for Active Living</h1>
         <p>
           Powering the future of AI and robotics through groundbreaking
           patents and platforms.
