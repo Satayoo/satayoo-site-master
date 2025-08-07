@@ -1,64 +1,41 @@
 import React from 'react';
 import './App.css';
 
-/**
- * The main application component for Satayoo.
- *
- * This component renders a simple marketing-style site inspired by
- * the clean look and feel of scale.com. It features a navigation bar,
- * a hero section and four content panels describing topics about
- * Satire, Raleigh, Artificial Intelligence and Patent Specifications.
- */
 const App: React.FC = () => {
-  // Compute the current year once for the footer
   const year = new Date().getFullYear();
   return (
     <div className="app-container">
       <nav className="navbar">
         <div className="logo">Satayoo</div>
         <ul className="nav-links">
-          <li><a href="#satire">Satire</a></li>
-          <li><a href="#raleigh">Raleigh</a></li>
-          <li><a href="#ai">AI</a></li>
-          <li><a href="#patents">Patents</a></li>
+          <li><a href="#rally-patent">Rally Patent</a></li>
+          <li><a href="#agentic-patent">Agentic Patent</a></li>
         </ul>
       </nav>
       <header className="hero">
-        <h1>Discover Satire, Raleigh, AI &amp; Patents</h1>
-        <p>Curated panels exploring diverse topics with a satirical twist.</p>
+        <h1>Innovations in AI & Robotics</h1>
+        <p>Explore our patent‑pending platforms: Rally AI for autonomous sports training and an Agentic development framework for multi‑agent AI.</p>
       </header>
       <main className="panels">
-        <section className="panel" id="satire">
-          <h2>Satire</h2>
-          <p>
-            Explore satirical commentary on today’s society and culture. This
-            section can include blog posts, essays or humorous takes on
-            current events.
-          </p>
+        <section className="panel" id="rally-patent">
+          <h2>Rally AI Patent</h2>
+          <p>A modular AI‑enabled sports robotics system that delivers realistic rally training for table tennis, tennis and other sports.</p>
+          <ul>
+            <li><strong>Hardware:</strong> omnidirectional mobile base, 4+ DOF striking arms, stereo/depth vision and onboard compute.</li>
+            <li><strong>Software:</strong> real‑time ball tracking, physics simulation and reinforcement learning to personalize training.</li>
+            <li><strong>Cloud & App:</strong> logs training data, syncs user profiles and adapts difficulty over time.</li>
+          </ul>
         </section>
-        <section className="panel" id="raleigh">
-          <h2>Raleigh</h2>
-          <p>
-            Learn about the vibrant city of Raleigh—its history, people and
-            innovations. Highlight local landmarks, events and community
-            stories.
-          </p>
-        </section>
-        <section className="panel" id="ai">
-          <h2>Artificial Intelligence</h2>
-          <p>
-            Dive into AI advancements, ethics and applications shaping our
-            world. Share articles, tutorials or opinion pieces about the
-            opportunities and challenges of AI.
-          </p>
-        </section>
-        <section className="panel" id="patents">
-          <h2>Patent Specifications</h2>
-          <p>
-            Understand patent specifications and how they protect
-            groundbreaking ideas. Provide resources on filing patents and
-            analyses of notable patent cases.
-          </p>
+        <section className="panel" id="agentic-patent">
+          <h2>Agentic Multi‑Agent Platform</h2>
+          <p>A development platform that lets you design, simulate and deploy networks of cooperating AI agents.</p>
+          <ul>
+            <li>Visual agent graph interface for building workflows.</li>
+            <li>Execution engine for simulating inter‑agent planning and messaging.</li>
+            <li>Contextual memory layer that agents query and update dynamically.</li>
+            <li>Prompt orchestration and an SDK for extensibility.</li>
+            <li>Use cases include customer service networks, collaborative software engineering, legal research and workflow automation.</li>
+          </ul>
         </section>
       </main>
       <footer className="footer">
