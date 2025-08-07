@@ -3,7 +3,7 @@
  *
  * This stylesheet defines a modern layout inspired by tavily.com. It
  * includes an announcement bar, a navigation header, a hero
- * section with call‑to‑action buttons, a trusted‑by section, a
+ * section with call‑to‑action buttons and a trusted‑by section, a
  * two‑column patent grid and a simple contact section. Colours and
  * typography are chosen to evoke a clean, professional feel.
  */
@@ -111,7 +111,35 @@ body {
 .hero {
   text-align: center;
   padding: 5rem 1rem 4rem;
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  /* allow video background behind content */
+  position: relative;
+  overflow: hidden;
+}
+/* Overlay to improve contrast over the video */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: -1;
+}
+/* Video element styling for the hero background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+/* Container for hero text to ensure it sits above the video */
+.hero-content {
+  position: relative;
+  z-index: 0;
 }
 .hero h1 {
   font-size: 2.8rem;
@@ -148,6 +176,17 @@ body {
   color: #444;
   font-weight: 600;
   font-size: 1.1rem;
+}
+/* Style the company logos in the trusted by section */
+.trusted-logos img {
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.trusted-logos img:hover {
+  opacity: 1;
 }
 
 /* Patents section */
@@ -207,6 +246,4 @@ body {
   background-color: #fff;
   color: #888;
   font-size: 0.9rem;
-  border-top: 1px solid #e6e6e6;
-  margin-top: auto;
 }
