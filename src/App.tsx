@@ -82,7 +82,7 @@ const App: React.FC = () => {
           Your browser does not support the video tag.
         </video>
         <div className="hero-content">
-          {/* Plain, high-impact heading without gradient colours */}
+          {/* Plain heading without gradient colours */}
           <h1 className="hero-title">Breakthrough AI for Active Living</h1>
           <p>
             Powering the future of AI and robotics through groundbreaking
@@ -102,8 +102,7 @@ const App: React.FC = () => {
       {/* Trusted by section with company logos */}
       <section className="trusted">
         <p className="trusted-text">
-          Satayoo builds next‑gen AI robotics using the world's most advanced
-          tools
+          Satayoo builds next‑gen AI robotics using the world's most advanced tools
         </p>
         <div className="trusted-logos">
           <img src="/logos/gemini.png" alt="Gemini Pro logo" />
