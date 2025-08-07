@@ -99,7 +99,7 @@ const App: React.FC = () => {
 
       {/* Trusted by section with company logos */}
       <section className="trusted">
-        <p className="trusted-text">Trusted by innovators worldwide</p>
+        <p className="trusted-text">Satayoo builds next-gen AI robotics using the world's most advanced tools</p>
         <div className="trusted-logos">
           <img src="/logos/gemini.png" alt="Gemini Pro logo" />
           <img src="/logos/naturalreader.png" alt="Natural Reader logo" />
