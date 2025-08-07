@@ -48,8 +48,8 @@ const App: React.FC = () => {
           patents and platforms.
         </p>
         <div className="hero-buttons">
-          <a className="btn primary" href="#patents">Our Patents</a>
-          <a className="btn secondary" href="#contact">Get in Touch</a>
+          <a className="btn primary" href="#patents">Book a Demo</a>
+          <a className="btn secondary" href="#contact">Build AI</a>
         </div>
       </section>
 
