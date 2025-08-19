@@ -27,12 +27,23 @@
   <main>
     <section class="section">
       <h2>Developer Guides</h2>
-      <p>In the near future we’ll publish tutorials and API references to help you integrate with our Agentic and Rally platforms.</p>
+      <p>Start by installing our SDK via npm:</p>
+      <pre><code>npm install @satayoo/agentic-sdk</code></pre>
+      <p>Then import the client and authenticate with your API key:</p>
+      <pre><code>import { AgenticClient } from '@satayoo/agentic-sdk'; const client = new AgenticClient({ apiKey: 'YOUR_API_KEY' });</code></pre>
+      <p>You can now create and manage agents programmatically. Check our repository for more examples.</p>
     </section>
 
     <section class="section">
       <h2>Platform Overview</h2>
-      <p>Learn how our multi‑agent framework works under the hood, including architecture diagrams and design principles.</p>
+      <p>Our Agentic platform uses a distributed microservice architecture. Each agent runs as an independent service communicating via message queues. The core orchestrator coordinates tasks, manages state and handles recovery.</p>
+      <p>Key components include:</p>
+      <ul>
+        <li><strong>Scheduler</strong> – assigns tasks to available agents based on load and priority.</li>
+        <li><strong>State Store</strong> – persists agent state to ensure reliability.</li>
+        <li><strong>Monitoring Dashboard</strong> – lets you observe agent health and metrics in real time.</li>
+      </ul>
+      <p>For more technical details, visit our GitHub repository and explore the documentation in the <code>docs/</code> directory.</p>
     </section>
   </main>
 
