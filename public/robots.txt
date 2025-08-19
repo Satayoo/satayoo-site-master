@@ -4,3 +4,4 @@ Disallow:
 
 Sitemap: https://satayoo.com/sitemap.xml
 # Added comment to trigger redeployment
+# End of file
