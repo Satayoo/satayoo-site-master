@@ -3,3 +3,4 @@ User-agent: *
 Disallow:
 
 Sitemap: https://satayoo.com/sitemap.xml
+# Added comment to trigger redeployment
