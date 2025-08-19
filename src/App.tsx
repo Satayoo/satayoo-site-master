@@ -114,8 +114,10 @@ const App: React.FC = () => {
           <img src="/logos/openphone.png" alt="OpenPhone logo" />
           <img src="/logos/adobe.png" alt="Adobe logo" />
           <img src="/logos/grok.png" alt="Grok logo" />
-          <img src="/logos/claude.png" alt="Claude AI logo" />
-          <img src="/logos/copilot.png" alt="VSCode Copilot logo" />
+        <img src="/logos/claude.png" alt="Claude AI logo" />
+        <img src="/logos/copilot.png" alt="VSCode Copilot logo" />
+        <img src="/logos/tactilerobotics-logo.png" alt="Tactile Robotics logo" />
+
         </div>
       </section>
 
