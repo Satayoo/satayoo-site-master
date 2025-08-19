@@ -43,4 +43,29 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React docu
+
+---
+
+# Satayoo Website
+
+This repository contains the source code for the Satayoo website. It is a React application bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Branching Strategy
+
+- **main** — production-ready code. Deployments to the live website are built from this branch.
+- **dev** — active development happens here. Pull requests and changes should be merged into this branch first. When changes are stable and tested, they can be merged into `main`.
+
+## Continuous Integration / Continuous Deployment (CI/CD)
+
+We use GitHub Actions (`.github/workflows/deploy.yml`) to automatically build and test the project on every push:
+
+- **Development (`dev`) branch** — the workflow installs dependencies, runs tests and builds the project to ensure nothing is broken.
+- **Production (`main`) branch** — in addition to building and testing, this job can trigger deployment to your hosting provider. Add your deployment commands/secrets to the workflow file (e.g., to deploy to Vercel, GitHub Pages or another platform).
+
+## Project Structure
+
+- `public/` — static assets such as HTML files and images. Partner logos live in `public/logos/`.
+- `src/` — React components and application logic. The `App.tsx` file controls the layout of the main page.
+- `.github/workflows/` — CI/CD pipeline definitions.
+mentation](https://reactjs.org/).
