@@ -1,21 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from './Navigation';
+import Home from './Home';
+import Agentic from './Agentic';
 import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div className="app-container">
-      {/* Announcement bar */}
-      <header className="announcement-bar">
-        🚀 Satayoo pushes the boundaries of AI & robotics.{' '}
-        <a href="#patents">Read more</a>
-      </header>
-
-      {/* Hero section */}
-      <section className="hero">
-        <h1 className="hero-title">Breakthrough AI for Active Living</h1>
-        <p>Powering the future of AI and robotics through groundbreaking patents and platforms.</p>
-      </section>
-    </div>
+    <Router>
+      <Navigation />
+      <div style={{ paddingTop: '60px' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/agentic" element={<Agentic />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
