@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const App: React.FC = () => {
   return (
@@ -76,6 +78,10 @@ const App: React.FC = () => {
           <img src="/logos/runway.png" alt="Runway" />
         </div>
       </section>
+      
+      {/* Vercel Analytics */}
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 };

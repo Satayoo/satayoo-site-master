@@ -1,0 +1,34 @@
+GitHub Authentication Setup Instructions
+=========================================
+
+Run this command in your terminal:
+> gh auth login
+
+When prompted, select these options:
+
+1. "What account do you want to log into?"
+   → Choose: GitHub.com
+
+2. "What is your preferred protocol for Git operations?"
+   → Choose: HTTPS
+
+3. "Authenticate Git with your GitHub credentials?"
+   → Choose: Yes
+
+4. "How would you like to authenticate GitHub CLI?"
+   → Choose: Login with a web browser
+
+5. Copy the one-time code shown in the terminal
+
+6. Press Enter to open github.com in your browser
+
+7. Paste the code when prompted in the browser
+
+8. Authorize the GitHub CLI
+
+9. Return to terminal - you should see "✓ Authentication complete"
+
+After authentication is complete, run:
+> git push origin main
+
+Your changes will then be pushed to GitHub and automatically deployed to Vercel!
