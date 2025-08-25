@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- NVIDIA Inception Program Logo Placeholder -->
+  <!-- Replace this with the official NVIDIA Inception logo from: -->
+  <!-- https://www.nvidia.com/en-us/startups/inception-program/ -->
+  
+  <rect width="250" height="100" fill="#76b900" rx="8"/>
+  
+  <text x="125" y="35" 
+        font-family="Arial, sans-serif" 
+        font-size="20" 
+        font-weight="bold" 
+        fill="white" 
+        text-anchor="middle">
+    NVIDIA
+  </text>
+  
+  <text x="125" y="60" 
+        font-family="Arial, sans-serif" 
+        font-size="16" 
+        fill="white" 
+        text-anchor="middle">
+    INCEPTION
+  </text>
+  
+  <text x="125" y="80" 
+        font-family="Arial, sans-serif" 
+        font-size="12" 
+        fill="white" 
+        text-anchor="middle">
+    PROGRAM PARTNER
+  </text>
+</svg>

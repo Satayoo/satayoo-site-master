@@ -261,6 +261,149 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* NVIDIA Inception Program Section */
+.nvidia-inception {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 100%);
+  border-top: 3px solid #76b900;
+}
+
+.nvidia-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .nvidia-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .nvidia-badge {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.nvidia-badge {
+  position: sticky;
+  top: 2rem;
+}
+
+.nvidia-logo {
+  width: 250px;
+  height: auto;
+  filter: none;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.nvidia-logo:hover {
+  transform: scale(1.05);
+}
+
+.nvidia-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #000;
+  font-weight: 700;
+}
+
+.nvidia-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.nvidia-benefits {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.nvidia-benefits h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #76b900;
+}
+
+.nvidia-benefits ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nvidia-benefits li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.nvidia-benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #76b900;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nvidia-impact {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  border-left: 4px solid #76b900;
+}
+
+.nvidia-impact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.nvidia-impact p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.nvidia-cta {
+  margin-top: 2rem;
+}
+
+.nvidia-cta .btn {
+  background: #76b900;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nvidia-cta .btn:hover {
+  background: #5a8c00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(118, 185, 0, 0.3);
+}
+
+/* Update trusted section to better highlight NVIDIA */
+.trusted-logos img[alt="NVIDIA Inception"] {
+  filter: none;
+  opacity: 1;
+  height: 50px;
+}
+
 /* Footer styling */
 .footer {
   text-align: center;
