@@ -11,3 +11,9 @@ test('renders announcement bar text', () => {
   const banner = screen.getByText(/Satayoo pushes the boundaries of AI & robotics/i);
   expect(banner).toBeInTheDocument();
 });
+
+test('renders design partner section', () => {
+  render(<App />);
+  const partner = screen.getByText(/Design Partner/i);
+  expect(partner).toBeInTheDocument();
+});

@@ -179,6 +179,30 @@ body {
   gap: 1rem;
 }
 
+/* Design partner section */
+.design-partner {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f7f9fc;
+}
+
+.design-partner h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.design-partner img {
+  height: 60px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.design-partner img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
 /* Trusted by section */
 .trusted {
   text-align: center;

@@ -73,6 +73,21 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Design Partner Section */}
+      <section className="design-partner">
+        <h2>Design Partner</h2>
+        <a
+          href="https://tactilerobotics.ai/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/logos/tactilerobotics-logo.png"
+            alt="Tactile Robotics"
+          />
+        </a>
+      </section>
+
       {/* Trusted By Section */}
       <section className="trusted">
         <p className="trusted-text">Trusted by leading innovators in AI and technology</p>
