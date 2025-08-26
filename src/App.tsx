@@ -22,9 +22,9 @@ const App: React.FC = () => {
       <section className="nvidia-inception" id="nvidia-inception">
         <div className="nvidia-content">
           <div className="nvidia-badge">
-            <img 
-              src="/logos/nvidia-inception.svg" 
-              alt="NVIDIA Inception Program Member" 
+            <img
+              src="/logos/nvidia-inception.svg"
+              alt="NVIDIA Inception Program Partner Badge"
               className="nvidia-logo"
             />
           </div>
@@ -54,15 +54,21 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="nvidia-cta">
-              <a 
-                href="https://www.nvidia.com/en-us/startups/" 
-                target="_blank" 
+              <a
+                href="https://www.nvidia.com/en-us/startups/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="btn primary"
               >
                 Learn More About NVIDIA Inception
               </a>
             </div>
+            <p className="nvidia-disclaimer">
+              NVIDIA, the NVIDIA logo, NVIDIA Inception, and the NVIDIA Inception logo are
+              trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other
+              countries. Membership in NVIDIA Inception does not constitute an endorsement by
+              NVIDIA of our products or services.
+            </p>
           </div>
         </div>
       </section>
