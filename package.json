@@ -4,9 +4,9 @@
   "private": true,
   "description": "Satayoo website with Next.js in static-site directory",
   "scripts": {
-    "dev": "cd static-site && npm run dev",
-    "build": "cd static-site && npm install && npm run build",
-    "start": "cd static-site && npm run start"
+    "dev": "npm run dev --prefix static-site",
+    "build": "npm install --prefix static-site && npm run build --prefix static-site",
+    "start": "npm run start --prefix static-site"
   },
   "dependencies": {
     "next": "14.2.5",
