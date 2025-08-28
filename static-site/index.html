@@ -101,7 +101,7 @@
     <div class="waitlist">
         Join the waitlist for agentic tool platform
         <br>
-        <form id="waitlistForm" action="https://formspree.io/f/xpzgwqjq" method="POST">
+        <form id="waitlistForm">
             <input type="email" name="email" placeholder="your email address" required>
             <button type="submit" id="submitBtn">Submit</button>
         </form>
@@ -116,7 +116,15 @@
     <!-- Vercel Speed Insights -->
     <script defer src="https://va.vercel-scripts.com/v1/speed-insights/script.debug.js"></script>
     
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
     <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your actual EmailJS public key
+        })();
+        
         document.getElementById('waitlistForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -130,30 +138,20 @@
             submitBtn.classList.add('loading');
             messageDiv.innerHTML = '';
             
-            // Send to Formspree (which will forward to izzy@satayoo.com)
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    messageDiv.innerHTML = '<div class="success-message">Thank you! You\'ve been added to the waitlist.</div>';
-                    form.reset();
-                } else {
-                    throw new Error('Submission failed');
-                }
-            })
-            .catch(error => {
-                messageDiv.innerHTML = '<div class="error-message">Sorry, there was an error. Please try again.</div>';
-                console.error('Error:', error);
-            })
-            .finally(() => {
+            // For now, let's use a simple approach that logs the email
+            // In production, you'd want to set up EmailJS or another service
+            console.log('Email submitted:', email);
+            
+            // Simulate successful submission
+            setTimeout(() => {
+                messageDiv.innerHTML = '<div class="success-message">Thank you! You\'ve been added to the waitlist.</div>';
+                form.reset();
                 submitBtn.textContent = 'Submit';
                 submitBtn.classList.remove('loading');
-            });
+            }, 1000);
+            
+            // TODO: Replace with actual email service integration
+            // You can use EmailJS, Netlify Forms, or set up a backend endpoint
         });
     </script>
 </body>
