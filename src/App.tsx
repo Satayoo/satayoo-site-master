@@ -1,93 +1,186 @@
 import React from 'react';
 import './App.css';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 
+/**
+ * Main application component for Satayoo.
+ * It features an announcement bar, navigation header, hero section with
+ * call‑to‑action buttons and a background video, a trusted‑by section with
+ * partner logos, a two‑card patents overview, a contact section and a footer.
+ */
 const App: React.FC = () => {
+  const year = new Date().getFullYear();
+
   return (
     <div className="app-container">
       {/* Announcement bar */}
-      <header className="announcement-bar">
-        🚀 Satayoo pushes the boundaries of AI & robotics.{' '}
-        <a href="#patents">Read more</a>
-      </header>
+      <div className="announcement-bar">
+         Satayoo pushes the boundaries of AI & robotics.{' '}
+        <a
+          href="https://satayoo.com/blog"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read more
+        </a>
+      </div>
 
-      {/* Hero section */}
-      <section className="hero">
-        <h1 className="hero-title">Breakthrough AI for Active Living</h1>
-        <p>Powering the future of AI and robotics through groundbreaking patents and platforms.</p>
-      </section>
-
-      {/* NVIDIA Inception Program Partner Section */}
-      <section className="nvidia-inception" id="nvidia-inception">
-        <div className="nvidia-content">
-          <div className="nvidia-badge">
-            <img
-              src="/logos/nvidia-inception.svg"
-              alt="NVIDIA Inception Program Partner Badge"
-              className="nvidia-logo"
-            />
-          </div>
-          <div className="nvidia-text">
-            <h2>NVIDIA Inception Program Partner</h2>
-            <p className="nvidia-description">
-              We are proud to be a member of the <strong>NVIDIA Inception Program</strong>, 
-              an exclusive accelerator designed to nurture startups revolutionizing industries 
-              with advancements in AI, deep learning, and data science.
-            </p>
-            <div className="nvidia-benefits">
-              <h3>Partnership Benefits</h3>
-              <ul>
-                <li>Access to cutting-edge NVIDIA GPU technology and cloud credits</li>
-                <li>Technical support and training from NVIDIA's deep learning experts</li>
-                <li>Go-to-market support and co-marketing opportunities</li>
-                <li>Connection to NVIDIA's network of venture capitalists and industry partners</li>
-                <li>Early access to the latest NVIDIA hardware and software innovations</li>
-              </ul>
-            </div>
-            <div className="nvidia-impact">
-              <h3>Accelerating Our Innovation</h3>
-              <p>
-                Through our partnership with NVIDIA, we're leveraging state-of-the-art GPU computing 
-                to advance our AI and robotics solutions, enabling faster model training, improved 
-                inference performance, and breakthrough innovations in active living technology.
-              </p>
-            </div>
-            <div className="nvidia-cta">
+      {/* Navigation header */}
+      <header className="navbar">
+        <div className="logo">Satayoo</div>
+        <nav>
+          <ul className="nav-links">
+            <li>
+              <a href="#patents">Patents</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
               <a
-                href="https://www.nvidia.com/en-us/startups/"
+                href="https://blog.satayoo.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn primary"
               >
-                Learn More About NVIDIA Inception
+                Blog
               </a>
-            </div>
-            <p className="nvidia-disclaimer">
-              NVIDIA, the NVIDIA logo, NVIDIA Inception, and the NVIDIA Inception logo are
-              trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other
-              countries. Membership in NVIDIA Inception does not constitute an endorsement by
-              NVIDIA of our products or services.
-            </p>
+            </li>
+            <li>
+              <a
+                href="https://docs.satayoo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Docs
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className="header-buttons">
+          <a className="btn secondary" href="#patents">
+            Explore Patents
+          </a>
+          <a className="btn primary" href="#contact">
+            Talk to an Expert
+          </a>
+        </div>
+      </header>
+
+      {/* Hero section with background video */}
+      <section className="hero">
+        {/* The background video plays behind the text */}
+        <video
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-hidden="true"
+        >
+          <source src="/shootingDay003.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="hero-content">
+          {/* Plain heading without gradient colours */}
+          <h1 className="hero-title">Breakthrough AI for Active Living</h1>
+          <p>
+            Powering the future of AI and robotics through groundbreaking
+            patents and platforms.
+          </p>
+          <div className="hero-buttons">
+            <a className="btn primary" href="#patents">
+              Book a Demo
+            </a>
+            <a className="btn secondary" href="#contact">
+              Build AI
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Trusted By Section */}
+      {/* Trusted by section with company logos */}
       <section className="trusted">
-        <p className="trusted-text">Trusted by leading innovators in AI and technology</p>
+        <p className="trusted-text">
+          Satayoo builds next‑gen AI robotics using the world’s most advanced
+          tools
+        </p>
         <div className="trusted-logos">
-          <img src="/logos/nvidia-inception.svg" alt="NVIDIA Inception" />
-          <img src="/logos/openai.png" alt="OpenAI" />
-          <img src="/logos/gemini.png" alt="Gemini" />
-          <img src="/logos/grok.png" alt="Grok" />
-          <img src="/logos/runway.png" alt="Runway" />
+          {/* Replace the src attributes below with your actual logo file names
+              from the public/logos directory if different */}
+          <img src="/logos/gemini.png" alt="Gemini Pro logo" />
+          <img src="/logos/naturalreader.png" alt="Natural Reader logo" />
+          <img src="/logos/openai.png" alt="OpenAI logo" />
+          <img src="/logos/figma.png" alt="Figma logo" />
+          <img src="/logos/runway.png" alt="Runway logo" />
+          <img src="/logos/cursor.png" alt="Cursor logo" />
+          <img src="/logos/openphone.png" alt="OpenPhone logo" />
+          <img src="/logos/adobe.png" alt="Adobe logo" />
+          <img src="/logos/grok.png" alt="Grok logo" />
+          <img src="/logos/claude.png" alt="Claude AI logo" />
+          <img src="/logos/copilot.png" alt="Copilot logo" />
+          <img src="/logos/tactilerobotics-logo.png" alt="Tactile Robotics logo" />
         </div>
       </section>
-      
-      {/* Vercel Analytics */}
-      <Analytics />
-      <SpeedInsights />
+
+      {/* Patents section */}
+      <section className="patents" id="patents">
+        <div className="patent-card">
+          <h2>Rally AI Patent</h2>
+          <p>
+            A modular AI‑enabled sports robotics system that delivers realistic
+            rally training for table tennis, tennis and other sports.
+          </p>
+          <ul>
+            <li>
+              <strong>Hardware:</strong> Omnidirectional mobile base, 4+ DOF
+              striking arms, stereo/depth vision and onboard compute.
+            </li>
+            <li>
+              <strong>Software:</strong> Real‑time ball tracking, physics
+              simulation and reinforcement learning to personalise training.
+            </li>
+            <li>
+              <strong>Cloud & App:</strong> Logs training data, syncs user
+              profiles and adapts difficulty over time.
+            </li>
+          </ul>
+        </div>
+
+        <div className="patent-card">
+          <h2>Agentic Multi‑Agent Platform</h2>
+          <p>
+            A development platform that lets you design, simulate and deploy
+            networks of cooperating AI agents.
+          </p>
+          <ul>
+            <li>Visual agent graph interface for building workflows.</li>
+            <li>
+              Execution engine for simulating inter‑agent planning and messaging.
+            </li>
+            <li>
+              Contextual memory layer that agents query and update dynamically.
+            </li>
+            <li>
+              Prompt orchestration and an SDK for extensibility.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Contact anchor */}
+      <section id="contact" className="contact-section">
+        <h2>Contact Us</h2>
+        <p>
+          Interested in learning more about our patents or partnering with us?
+          Reach out and our team will get back to you shortly.
+        </p>
+        <a className="btn primary" href="mailto:info@satayoo.com">
+          Email Us
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">© {year} Satayoo. All rights reserved.</footer>
     </div>
   );
 };
