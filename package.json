@@ -4,10 +4,10 @@
   "private": true,
   "description": "Satayoo website with Next.js",
   "scripts": {
-    "dev": "cd static-site && next dev",
-    "build": "cd static-site && next build",
-    "start": "cd static-site && next start",
-    "lint": "cd static-site && next lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "14.2.5",
