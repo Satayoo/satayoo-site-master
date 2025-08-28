@@ -27,8 +27,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
@@ -43,7 +41,43 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React docu
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Deployment Options
+
+Short answer: you **don't** run `npm install` "on the web." You either (a) push to GitHub and **Vercel runs it**, or (b) use a **cloud dev env** (Codespaces/StackBlitz) to run it, then push.
+
+### Your options
+
+1. **Standard (recommended)**
+   - Edit locally → `npm install` → commit/push → Vercel auto builds & deploys.
+
+2. **Web-only dev (no local)**
+   - Open **GitHub Codespaces** (or StackBlitz) → run `npm install` in its terminal → commit/push → Vercel builds.
+
+3. **CI-run (explicit)**
+   Add a GitHub Action (if you want a CI step to run it):
+
+```yaml
+# .github/workflows/build.yml
+name: build
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: 'npm' }
+      - run: npm ci
+      - run: npm run build
+```
+
+4. **Force redeploy (no code change)**
+   - Use a **Vercel Deploy Hook** URL; hitting it triggers Vercel to pull repo and run `npm install` + build.
+
+**Key idea:** your local clone is just a workspace.
+**The always-online site = Vercel**, which installs deps during each deploy.
 
 ---
 
