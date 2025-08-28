@@ -66,6 +66,23 @@
             background-color: black;
             color: white;
         }
+        
+        .success-message {
+            color: green;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        .error-message {
+            color: red;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -84,10 +101,11 @@
     <div class="waitlist">
         Join the waitlist for agentic tool platform
         <br>
-        <form>
-            <input type="email" placeholder="your email address" required>
-            <button type="submit">Submit</button>
+        <form id="waitlistForm" action="https://formspree.io/f/xpzgwqjq" method="POST">
+            <input type="email" name="email" placeholder="your email address" required>
+            <button type="submit" id="submitBtn">Submit</button>
         </form>
+        <div id="message"></div>
     </div>
     
     <div style="margin-top: 80px; font-size: 14px;">2025 Satayoo, Inc.</div>
@@ -97,5 +115,46 @@
     
     <!-- Vercel Speed Insights -->
     <script defer src="https://va.vercel-scripts.com/v1/speed-insights/script.debug.js"></script>
+    
+    <script>
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const messageDiv = document.getElementById('message');
+            const email = form.email.value;
+            
+            // Add loading state
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.classList.add('loading');
+            messageDiv.innerHTML = '';
+            
+            // Send to Formspree (which will forward to izzy@satayoo.com)
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    messageDiv.innerHTML = '<div class="success-message">Thank you! You\'ve been added to the waitlist.</div>';
+                    form.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch(error => {
+                messageDiv.innerHTML = '<div class="error-message">Sorry, there was an error. Please try again.</div>';
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitBtn.textContent = 'Submit';
+                submitBtn.classList.remove('loading');
+            });
+        });
+    </script>
 </body>
 </html>
