@@ -1,0 +1,7 @@
+# Ignore everything except the Next.js app
+*
+!nextjs-app/
+!nextjs-app/**
+!package.json
+!vercel.json
+!.vercelignore
