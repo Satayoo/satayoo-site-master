@@ -1,3 +1,6 @@
 {
+  "buildCommand": "cd static-site && npm install && npm run build",
+  "outputDirectory": "static-site/.next",
+  "installCommand": "npm install",
   "framework": "nextjs"
 }
