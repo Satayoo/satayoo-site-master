@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Satayoo Site',
-  description: 'Welcome to Satayoo',
+  description: 'Welcome to Satayoo - Modern Next.js website',
 }
 
 export default function RootLayout({

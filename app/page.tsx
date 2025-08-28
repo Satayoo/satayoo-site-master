@@ -18,7 +18,7 @@ export default function Home() {
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors">
               <h2 className="text-2xl font-semibold mb-3">⚡ Lightning Fast</h2>
-              <p className="opacity-80">Optimized performance with Next.js and deployed on Vercel&apos;s edge network.</p>
+              <p className="opacity-80">Optimized performance with Next.js and deployed on Vercel's edge network.</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors">

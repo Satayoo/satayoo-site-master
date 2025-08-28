@@ -2,11 +2,12 @@
   "name": "satayoo-site-master",
   "version": "1.0.0",
   "private": true,
-  "description": "Satayoo website with React app and Next.js app",
+  "description": "Satayoo website with Next.js",
   "scripts": {
-    "build": "cd nextjs-app && npm install && npm run build",
-    "dev": "cd nextjs-app && npm run dev",
-    "start": "cd nextjs-app && npm run start"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "14.2.5",
