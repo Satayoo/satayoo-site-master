@@ -1,0 +1,18 @@
+# Production dependencies for the sample application
+# These are the packages needed to run the application
+
+# For building executables (development dependency)
+pyinstaller>=6.0.0
+
+# Optional: For better compression (reduces exe size)
+# pyinstaller[compression]>=6.0.0
+
+# Optional: GUI-based builder
+# auto-py-to-exe>=2.42.0
+
+# Add your application's dependencies here
+# For example:
+# requests>=2.31.0
+# numpy>=1.24.0
+# pandas>=2.0.0
+# python-dotenv>=1.0.0
