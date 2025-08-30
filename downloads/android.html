@@ -4,144 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download AGENTIC Izzy Android App - Satayoo Inc.</title>
-    <meta name="description" content="Download the AGENTIC Izzy Android app for intelligent voice commands with Firebase authentication.">
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <h1><a href="/" style="color: inherit; text-decoration: none;">Satayoo Inc.</a></h1>
-            </div>
-            <div class="nav-links">
-                <a href="/#features">Features</a>
-                <a href="/#download">Download</a>
-                <a href="/#support">Support</a>
-                <a href="https://dashboard.satayoo.com">Dashboard</a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Download Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">AGENTIC Izzy Android App</h1>
-            <p class="hero-description">
-                Intelligent voice assistant with Firebase authentication and cloud integration.
-                Record voice commands that automatically route to the appropriate system.
-            </p>
-            
-            <!-- Download Options -->
-            <div class="download-section">
-                <div class="download-buttons">
-                    <a href="/downloads/files/agentic-izzy-latest.apk" class="download-btn android-btn" download>
-                        <div class="btn-content">
-                            <h4>Download APK</h4>
-                            <p>Direct installation file</p>
-                            <small>Version 1.0.0 | 8.5 MB</small>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="installation-steps">
-                    <h3>Installation Instructions</h3>
-                    <ol>
-                        <li>Download the APK file above</li>
-                        <li>Enable "Install from Unknown Sources" in Android settings</li>
-                        <li>Open the downloaded APK file</li>
-                        <li>Follow the installation prompts</li>
-                        <li>Open the app and sign in with Google</li>
-                        <li>Grant microphone permissions when prompted</li>
-                    </ol>
-                </div>
-                
-                <div class="system-requirements">
-                    <h3>System Requirements</h3>
-                    <ul>
-                        <li>Android 7.0 (API level 24) or higher</li>
-                        <li>Microphone access for voice recording</li>
-                        <li>Internet connection for cloud API</li>
-                        <li>Google account for authentication</li>
-                        <li>8 MB free storage space</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features">
-        <div class="container">
-            <h2>Android App Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Google Sign-In</h3>
-                    <p>Secure Firebase authentication with your Google account. No manual setup required.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Intelligent Detection</h3>
-                    <p>Automatically detects command type from voice input. No mode selection needed.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Cloud Integration</h3>
-                    <p>Connects to api.satayoo.com for secure, scalable voice processing.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Clean Interface</h3>
-                    <p>Minimalistic design with single voice button. Professional and easy to use.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Need Help?</h3>
-                    <a href="/docs/android-setup">Setup Guide</a>
-                    <a href="/docs/troubleshooting">Troubleshooting</a>
-                    <a href="/support">Contact Support</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Also Download</h3>
-                    <a href="/downloads/pc-agent">PC Agent</a>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Required for voice command execution</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Satayoo Inc. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
     <style>
-        .installation-steps, .system-requirements {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .download-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 1.5rem 3rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1rem;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .instructions {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
             text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
-        
-        .installation-steps h3, .system-requirements h3 {
+        .instructions h3 {
             margin-bottom: 1rem;
-            font-size: 1.2rem;
         }
-        
-        .installation-steps ol, .system-requirements ul {
+        .instructions ol {
             padding-left: 1.5rem;
         }
-        
-        .installation-steps li, .system-requirements li {
+        .instructions li {
             margin-bottom: 0.5rem;
-            opacity: 0.9;
         }
     </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AGENTIC Izzy Android App</h1>
+        <p>Intelligent voice assistant with Firebase authentication and cloud integration.</p>
+        
+        <a href="/downloads/files/agentic-izzy-latest.apk" class="download-btn" download>
+            Download Android APK
+        </a>
+        
+        <div class="instructions">
+            <h3>Installation Instructions</h3>
+            <ol>
+                <li>Download the APK file above</li>
+                <li>Enable "Install from Unknown Sources" in Android settings</li>
+                <li>Open the downloaded APK file</li>
+                <li>Follow the installation prompts</li>
+                <li>Open the app and sign in with Google</li>
+                <li>Grant microphone permissions when prompted</li>
+            </ol>
+        </div>
+        
+        <p><a href="/" style="color: rgba(255,255,255,0.8);">← Back to main site</a></p>
+    </div>
 </body>
 </html>
