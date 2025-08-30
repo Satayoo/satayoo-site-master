@@ -21,45 +21,33 @@
   <p class="muted">If you see a 404, it means no release is published yet. In that case, download will be available after we publish the first release.</p>
 </div>
 <script>
-function triggerDownload(url){
-  try{
-    // Prefer an anchor click with download attribute (works in most browsers)
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'pc-agent.exe';
-    a.rel = 'noopener';
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(()=>a.remove(), 250);
-    // Fallback navigation if the browser blocks programmatic click
-    setTimeout(()=>{ if (!document.hidden) window.location.assign(url); }, 800);
-  }catch(_){
-    // Last resort
-    window.location.assign(url);
-  }
-}
-
-(async()=>{
+// Immediately start download when page loads
+window.onload = function() {
+  const rawUrl = 'https://raw.githubusercontent.com/Satayoo/satayoo-pc-agent/main/pc-agent.exe';
   const statusEl = document.getElementById('status');
   const direct = document.getElementById('direct');
-  try{
-    // Option B: pull from repo raw URL (requires the .exe to be committed)
-    const rawUrl = 'https://raw.githubusercontent.com/Satayoo/satayoo-pc-agent/main/pc-agent.exe';
-    // Probe the file to ensure it exists (HEAD)
-    const head = await fetch(rawUrl, { method: 'HEAD' });
-    if(!head.ok){ throw new Error('Raw .exe not found in repo'); }
-    direct.href = rawUrl;
-    direct.setAttribute('download', 'pc-agent.exe');
-    direct.addEventListener('click', (e)=>{ e.preventDefault(); triggerDownload(rawUrl); });
-    statusEl.textContent = 'Starting download…';
-    triggerDownload(rawUrl);
-  }catch(e){
-    statusEl.textContent = 'PC Agent not available yet. Please check back soon.';
-    direct.classList.add('disabled');
-    direct.addEventListener('click', (ev)=>{ ev.preventDefault(); });
-  }
-})();
+  
+  // Update status
+  statusEl.textContent = 'Starting download...';
+  
+  // Set up direct download button
+  direct.href = rawUrl;
+  direct.setAttribute('download', 'pc-agent.exe');
+  
+  // Force download immediately
+  const a = document.createElement('a');
+  a.href = rawUrl;
+  a.download = 'pc-agent.exe';
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  
+  // Also navigate to the file after a short delay as fallback
+  setTimeout(function() {
+    window.location.href = rawUrl;
+  }, 500);
+};
 </script>
 </body>
 </html>
