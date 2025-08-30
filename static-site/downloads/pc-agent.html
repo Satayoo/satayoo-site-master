@@ -44,20 +44,18 @@ function triggerDownload(url){
   const statusEl = document.getElementById('status');
   const direct = document.getElementById('direct');
   try{
-    const api = 'https://api.github.com/repos/Satayoo/satayoo-pc-agent/releases/latest';
-    const r = await fetch(api,{headers:{'Accept':'application/vnd.github+json'}});
-    if(!r.ok) throw new Error('No release yet');
-    const data = await r.json();
-    const asset = (data.assets||[]).find(a=>/\.exe$/i.test(a.name));
-    if(!asset) throw new Error('No .exe asset found');
-    direct.href = asset.browser_download_url;
+    // Option B: pull from repo raw URL (requires the .exe to be committed)
+    const rawUrl = 'https://raw.githubusercontent.com/Satayoo/satayoo-pc-agent/main/pc-agent.exe';
+    // Probe the file to ensure it exists (HEAD)
+    const head = await fetch(rawUrl, { method: 'HEAD' });
+    if(!head.ok){ throw new Error('Raw .exe not found in repo'); }
+    direct.href = rawUrl;
     direct.setAttribute('download', 'pc-agent.exe');
-    direct.addEventListener('click', (e)=>{ e.preventDefault(); triggerDownload(asset.browser_download_url); });
+    direct.addEventListener('click', (e)=>{ e.preventDefault(); triggerDownload(rawUrl); });
     statusEl.textContent = 'Starting download…';
-    // Auto-start
-    triggerDownload(asset.browser_download_url);
+    triggerDownload(rawUrl);
   }catch(e){
-    statusEl.textContent = 'No Windows release is published yet. Please check back soon.';
+    statusEl.textContent = 'PC Agent not available yet. Please check back soon.';
     direct.classList.add('disabled');
     direct.addEventListener('click', (ev)=>{ ev.preventDefault(); });
   }
