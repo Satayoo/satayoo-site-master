@@ -16,12 +16,33 @@
 <body>
 <div class="box">
   <h1>Windows PC Agent</h1>
-  <p class="muted">Fetching the latest release… If the download doesn’t start, use the direct link below.</p>
-  <p><a id="direct" class="btn" href="#">Direct download</a></p>
+  <p class="muted" id="status">Fetching the latest release… If the download doesn’t start, use the direct link below.</p>
+  <p><a id="direct" class="btn" href="#" download>Direct download</a></p>
   <p class="muted">If you see a 404, it means no release is published yet. In that case, download will be available after we publish the first release.</p>
 </div>
 <script>
+function triggerDownload(url){
+  try{
+    // Prefer an anchor click with download attribute (works in most browsers)
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'pc-agent.exe';
+    a.rel = 'noopener';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(()=>a.remove(), 250);
+    // Fallback navigation if the browser blocks programmatic click
+    setTimeout(()=>{ if (!document.hidden) window.location.assign(url); }, 800);
+  }catch(_){
+    // Last resort
+    window.location.assign(url);
+  }
+}
+
 (async()=>{
+  const statusEl = document.getElementById('status');
+  const direct = document.getElementById('direct');
   try{
     const api = 'https://api.github.com/repos/Satayoo/satayoo-pc-agent/releases/latest';
     const r = await fetch(api,{headers:{'Accept':'application/vnd.github+json'}});
@@ -29,11 +50,16 @@
     const data = await r.json();
     const asset = (data.assets||[]).find(a=>/\.exe$/i.test(a.name));
     if(!asset) throw new Error('No .exe asset found');
-    document.getElementById('direct').href = asset.browser_download_url;
-    // Start download automatically
-    window.location.replace(asset.browser_download_url);
+    direct.href = asset.browser_download_url;
+    direct.setAttribute('download', 'pc-agent.exe');
+    direct.addEventListener('click', (e)=>{ e.preventDefault(); triggerDownload(asset.browser_download_url); });
+    statusEl.textContent = 'Starting download…';
+    // Auto-start
+    triggerDownload(asset.browser_download_url);
   }catch(e){
-    document.querySelector('.muted').textContent = 'No Windows release is published yet. Please check back soon.';
+    statusEl.textContent = 'No Windows release is published yet. Please check back soon.';
+    direct.classList.add('disabled');
+    direct.addEventListener('click', (ev)=>{ ev.preventDefault(); });
   }
 })();
 </script>
