@@ -1,0 +1,20 @@
+[33m7cc05bb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update index.html
+[33m72958c2[m Update index.html
+[33m0ebce8e[m Update index.html
+[33m672a86e[m Update index.html
+[33ma3068f0[m Update index.html
+[33mfba1b9c[m fix: use GitHub Releases URL instead of raw URL for exe download
+[33md66ee0e[m fix: auto-download pc-agent.exe immediately on page load + remove extra buttons
+[33m5093b31[m content: remove extra buttons and Founders; keep Windows download only
+[33mb1d0e8f[m feat(downloads): point to raw .exe in repo and auto-start
+[33ma4a3206[m feat(downloads): auto-start + forced direct download for PC Agent
+[33m0d9a5e2[m feat(web): add smart download page for PC Agent and update button link
+[33m58f65f9[m feat(web): add Windows PC Agent download link to GitHub Releases
+[33m64b454f[m feat: add Windows PC Agent download button
+[33m137092e[m content: concise Zeta-focused landing page (Breakthrough AI for Active Living)
+[33m8d00fd1[m fix(vercel): add static-site root and index.html to match Project Settings
+[33m56a4504[m chore: remove all images/videos and clean static site
+[33mfa68f18[m  Complete website redesign - Professional AGENTIC Izzy platform
+[33mebcd841[m Merge pull request #5 from Satayoo/codex/fix-build-error-in-static-site-directory
+[33m5f481c6[m[33m ([m[1;31morigin/codex/fix-build-error-in-static-site-directory[m[33m)[m Simplify build commands and move Vercel config
+[33m5f818e9[m Fix build configuration: add Next.js deps to root and simplify vercel.json
