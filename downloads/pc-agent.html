@@ -4,137 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download AGENTIC Izzy PC Agent - Satayoo Inc.</title>
-    <meta name="description" content="Download the AGENTIC Izzy PC Agent for Windows mouse automation and ChatGPT control.">
-    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .download-btn {
+            display: block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .download-btn h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .download-btn p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+        .instructions {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .instructions h3 {
+            margin-bottom: 1rem;
+        }
+        .instructions ol {
+            padding-left: 1.5rem;
+        }
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+        .github-link {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+        .back-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+        .back-link:hover {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <h1><a href="/" style="color: inherit; text-decoration: none;">Satayoo Inc.</a></h1>
-            </div>
-            <div class="nav-links">
-                <a href="/#features">Features</a>
-                <a href="/#download">Download</a>
-                <a href="/#support">Support</a>
-                <a href="https://dashboard.satayoo.com">Dashboard</a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Download Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">AGENTIC Izzy PC Agent</h1>
-            <p class="hero-description">
-                Standalone Windows executable that connects to your cloud API and performs 
-                mouse automation on ChatGPT.com. No Python dependencies required.
-            </p>
-            
-            <!-- Download Options -->
-            <div class="download-section">
-                <div class="download-buttons">
-                    <a href="/downloads/files/agentic-izzy-pc-agent-installer.exe" class="download-btn pc-btn" download>
-                        <div class="btn-content">
-                            <h4>Download Installer</h4>
-                            <p>Automated installation with setup wizard</p>
-                            <small>Version 1.0.0 | 2.1 MB</small>
-                        </div>
-                    </a>
-                    <a href="/downloads/files/agentic-izzy-pc-agent-portable.exe" class="download-btn pc-btn" download>
-                        <div class="btn-content">
-                            <h4>Portable Version</h4>
-                            <p>Standalone executable, no installation</p>
-                            <small>Version 1.0.0 | 1.8 MB</small>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="installation-steps">
-                    <h3>Installation Instructions</h3>
-                    <ol>
-                        <li>Download the installer above</li>
-                        <li>Run the installer as Administrator</li>
-                        <li>Follow the setup wizard</li>
-                        <li>Choose auto-start option (recommended)</li>
-                        <li>Agent will connect to api.satayoo.com automatically</li>
-                        <li>Approve voice commands when prompted</li>
-                    </ol>
-                </div>
-                
-                <div class="system-requirements">
-                    <h3>System Requirements</h3>
-                    <ul>
-                        <li>Windows 10 or Windows 11</li>
-                        <li>Internet connection for cloud API</li>
-                        <li>Chrome or Edge browser (for ChatGPT automation)</li>
-                        <li>Administrator privileges for installation</li>
-                        <li>5 MB free disk space</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="container">
+        <h1>AGENTIC Izzy PC Agent</h1>
+        <p>Standalone Windows executable for mouse automation and ChatGPT control. No Python dependencies required.</p>
+        
+        <div class="download-buttons">
+            <a href="/downloads/files/agentic-izzy-pc-agent-installer.exe" class="download-btn" download>
+                <h4>Download Installer</h4>
+                <p>Automated setup wizard</p>
+            </a>
+            <a href="/downloads/files/agentic-izzy-pc-agent-portable.exe" class="download-btn" download>
+                <h4>Portable Version</h4>
+                <p>Standalone executable</p>
+            </a>
         </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features">
-        <div class="container">
-            <h2>PC Agent Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Standalone Executable</h3>
-                    <p>Native C implementation with no Python dependencies. Fast, efficient, professional.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Mouse Automation</h3>
-                    <p>Direct ChatGPT.com control with intelligent keyboard navigation and agent mode activation.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Cloud Integration</h3>
-                    <p>Connects to api.satayoo.com to receive voice commands from your Android app.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>User Approval</h3>
-                    <p>Security dialogs for every command. You control what gets executed on your computer.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Intelligent Routing</h3>
-                    <p>Automatically opens the right tool: ChatGPT for general tasks, Cursor for coding.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>System Control</h3>
-                    <p>Handle screenshots, volume control, desktop management, and window operations.</p>
-                </div>
-            </div>
+        
+        <div class="instructions">
+            <h3>Installation Instructions</h3>
+            <ol>
+                <li>Download the installer above</li>
+                <li>Run the installer as Administrator</li>
+                <li>Follow the setup wizard</li>
+                <li>Choose auto-start option (recommended)</li>
+                <li>Agent will connect to api.satayoo.com automatically</li>
+                <li>Approve voice commands when prompted</li>
+            </ol>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Need Help?</h3>
-                    <a href="/docs/pc-agent-setup">Setup Guide</a>
-                    <a href="/docs/troubleshooting">Troubleshooting</a>
-                    <a href="/support">Contact Support</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Also Download</h3>
-                    <a href="/downloads/android">Android App</a>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Required for voice command input</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Source Code</h3>
-                    <a href="https://github.com/Satayoo/satayoo-pc-agent" target="_blank">GitHub Repository</a>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Open source C implementation</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Satayoo Inc. All rights reserved.</p>
-            </div>
+        
+        <div class="github-link">
+            <h3>Open Source</h3>
+            <p>View the source code and build instructions:</p>
+            <a href="https://github.com/Satayoo/satayoo-pc-agent" target="_blank" style="color: rgba(255,255,255,0.9);">
+                GitHub Repository
+            </a>
         </div>
-    </footer>
+        
+        <a href="/" class="back-link">← Back to main site</a>
+    </div>
 </body>
 </html>
